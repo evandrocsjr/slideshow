@@ -7,3 +7,17 @@ const images = [
     { 'id': '4', 'url': './img/album4.jpg' },
     { 'id': '5', 'url': './img/album5.jpg' }
 ]
+
+const container = document.querySelector('#container-items')
+
+const loadImages = (images, container) => {
+    images.forEach (image => {
+        container.innerHTML +=`
+        <div class ="items">
+            <img src="${image.url}">
+        </div>
+        `
+    })
+}
+
+loadImages(images, container)
